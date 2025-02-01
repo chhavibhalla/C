@@ -1,0 +1,161 @@
+/* General Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(120deg, #1a1a1a, #4a4a4a, #1a1a1a);
+    animation: backgroundAnimation 10s infinite alternate ease-in-out;
+}
+
+/* Background Gradient Animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(120deg,rgba(144, 33, 33, 0.52),rgb(67, 95, 166),rgba(143, 18, 85, 0.68));
+    }
+    100% {
+        background: linear-gradient(120deg,rgb(45, 45, 117), #009ffd,rgb(35, 139, 104));
+    }
+}
+
+/* Calculator Container */
+.calculator {
+    background: linear-gradient(145deg, rgb(136, 16, 100), rgb(132, 27, 106));
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Display Screen */
+#display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 28px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#display:focus {
+    outline: none;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* General Button Styling */
+button {
+    height: 55px;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Operator Buttons */
+button.operator {
+    background: linear-gradient(45deg, #ff6ec7, #ff3cac);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 110, 199, 0.5);
+}
+
+button.operator:hover {
+    background: linear-gradient(45deg, #ff5abf, #ff2a95);
+}
+
+/* Clear Button */
+button.clear {
+    background: linear-gradient(45deg, #ff4757, #ff2e63);
+    grid-column: span 2;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.5);
+}
+
+button.clear:hover {
+    background: linear-gradient(45deg, #ff3342, #ff1e50);
+}
+
+/* Equals Button */
+button.equals {
+    background: linear-gradient(45deg, #2ed573, #1dd1a1);
+    grid-column: span 2;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.5);
+}
+
+button.equals:hover {
+    background: linear-gradient(45deg, #25c164, #10ac84);
+}
+
+/* Heading Styling */
+h1 {
+    color: rgb(151, 28, 114);
+    font-family: 'Pacifico', cursive;
+    position: fixed;
+    top: 20px;
+    font-size: 4rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Footer Text */
+p {
+    position: fixed;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Audiowide', cursive;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 5px rgba(255, 110, 199, 0.5);
+    }
+    100% {
+        text-shadow: 2px 2px 10px rgba(255, 110, 199, 0.9);
+    }
+}
